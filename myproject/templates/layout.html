@@ -1,0 +1,52 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Complex Layout - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'ui/themes/default/easyui.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'ui/themes/icon.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'ui/demo/demo.css' %}">
+	<script type="text/javascript" src="{% static 'ui/jquery.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'ui/jquery.easyui.min.js' %}"></script>
+	<style>
+	.jd-menu{
+	   display:block;
+	   padding: 8px;
+	   border-bottom:1px solid #ddd ;
+	}
+	.active{
+	   background:#3b5998;
+	   color:white;
+	}
+	</style>
+</head>
+<body class="easyui-layout">
+
+
+		<div data-options="region:'north'" style="height:50px"></div>
+		<div data-options="region:'south',split:true" style="height:50px;"></div>
+
+		<div data-options="region:'west',split:true" title="菜单" style="width:100px;">
+			<div id ="aa" class="easyui-accordion" data-options="fit:true,border:false">
+				<div title="区域管理"  style="padding:10px;">
+					<a id='provice' class='jd-menu' href="{% url 'showproject:provice' %}" >省</a>
+                    <a id ='city' class='jd-menu' href="{% url 'showproject:city' %}">市</a>
+                    <a id ='hello' class="jd-menu" href="{% url 'showproject:hello' %}">县</a>
+				</div>
+				<div title="用户管理" data-options="selected:true" style="padding:10px;">
+					content2
+				</div>
+				<div title="商户管理" style="padding:10px">
+					content3
+				</div>
+			</div>
+		</div>
+		<div data-options="region:'center',title:'主页',iconCls:'icon-ok'">
+		      {% block content %}{% endblock %}
+		</div>
+      {% block js %}
+      {% endblock %}
+
+</body>
+</html>

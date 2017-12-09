@@ -1,0 +1,47 @@
+{% extends 'layout.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+    <script src="{% static 'hchart/highcharts.js' %}"></script>
+	<script src="{% static 'hchart/modules/exporting.js' %}"></script>
+    <div id="container"></div>
+
+
+
+	<script>
+	$(function () {
+	    var  val= [{{ data | safe }}]
+    var chart = Highcharts.chart('container', {
+        title: {
+            text: '图表变换'
+        },
+        subtitle: {
+            text: '普通的'
+        },
+        xAxis: {
+            categories: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月']
+        },
+        series:val
+    });
+
+
+
+});
+</script>
+
+
+{% endblock %}
+
+
+{% block js %}
+
+   <script>
+      $(function () {
+          $('#city').addClass('active')
+          $('#aa').accordion('select','区域管理');
+      })
+
+   </script>
+
+{% endblock %}
