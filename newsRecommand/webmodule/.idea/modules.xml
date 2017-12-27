@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/chapter-2-spring-boot-quick-start/chapter-2-spring-boot-quick-start.iml" filepath="$PROJECT_DIR$/chapter-2-spring-boot-quick-start/chapter-2-spring-boot-quick-start.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chapter-4-spring-boot-validating-form-input/chapter-4-spring-boot-validating-form-input.iml" filepath="$PROJECT_DIR$/chapter-4-spring-boot-validating-form-input/chapter-4-spring-boot-validating-form-input.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chapter-5-spring-boot-paging-sorting/chapter-5-spring-boot-paging-sorting.iml" filepath="$PROJECT_DIR$/chapter-5-spring-boot-paging-sorting/chapter-5-spring-boot-paging-sorting.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-data-elasticsearch-crud/spring-data-elasticsearch-crud.iml" filepath="$PROJECT_DIR$/spring-data-elasticsearch-crud/spring-data-elasticsearch-crud.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-data-elasticsearch-query/spring-data-elasticsearch-query.iml" filepath="$PROJECT_DIR$/spring-data-elasticsearch-query/spring-data-elasticsearch-query.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot.iml" filepath="$PROJECT_DIR$/springboot.iml" />
